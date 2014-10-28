@@ -1,0 +1,5 @@
+{
+  "require": {
+    "pda/pheanstalk": "2.1.0"
+  }
+}
