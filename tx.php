@@ -13,5 +13,5 @@ require('vendor/autoload.php');
 require('configuration.php');
 require('system/beanstalkd.php');
 
-$worker = new beanstalkd('Beth'); 
+$worker = new beanstalkd('SMPP Sender'); 
 $worker->connect('tx', $config['smpp']);
