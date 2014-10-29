@@ -79,7 +79,6 @@ class beanstalkd
         if ($memory > 1000000)
         {
             $this->log('Shutting down due to excessive memory usage:' . $memory);
-            $this->worker->close();
             exit();
         }
     }

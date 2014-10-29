@@ -11,7 +11,7 @@
 
 require('vendor/autoload.php');
 require('configuration.php');
-require('system/beanstalkd.php');
+require('system/queue.php');
 
 $worker = new beanstalkd('SMPP Reciever'); 
 $worker->connect('rx', $config['smpp']);

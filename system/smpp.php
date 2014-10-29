@@ -94,9 +94,9 @@ class sms
             $sender = new SmppAddress($sms['from'], SMPP::TON_ALPHANUMERIC);
             $reciever = new SmppAddress($sms['to'], SMPP::TON_NATIONAL, SMPP::NPI_E164);
             
-            $this->smpp->sendSMS($sender, $reciever, $encoded, $tags);
+            $sms = $this->smpp->sendSMS($sender, $reciever, $encoded, $tags);
             
-            return true;
+            return $sms; // Will return the sequence number
         }
         catch (Exception $e) 
         {
